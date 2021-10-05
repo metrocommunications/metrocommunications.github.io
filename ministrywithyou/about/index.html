@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content=""> 
+		<meta name="keywords" content=""> 
+
+		<link rel="stylesheet" href="/assets/css/main.css"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+	<!-- Custom fonts for this template -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Comfortaa&display=swap" rel="stylesheet">
+		<title>
+			Ministry with You | About
+		</title>
+	</head>
+	<body>
+		<nav class="navbar" id="navbar">
+	<input type="checkbox" class="navbar__toggle" id="navbar__toggle" aria-label="open the navigation list"></input>
+	<ul class="navbar__list">
+		<li><a href="/" >Home</a></li>
+		<li><a href="/about/"class='current'>About</a></li>
+		<li><a href="/newsletters/">Newsletters</a></li>
+		<li><a href="https://www.myegiving.com/App/Giving/stoneworks">Give</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	</ul>
+	<label for="navbar__toggle" class="navbar-toggle-label">
+		<span></span>
+	</label>
+</nav>
+
+
+		<main class="container--main--bg">
+		<section>
+	<div class="container">
+		<div class="about-wrapper">
+			<div class="about-card">
+		<div class="about-image"><img class="img-blk" src="/assets/images/FAMILY.jpg" /></div>
+<div class="about-title">About Us</div>
+<div class="about-text">
+	We are Jacob and Karina Starnes, serving in Gheorgheni (Gyergyószentmiklos), Romania, to evangelize, disciple, and church-plant among the Székély and Roma minority groups in Romania.
+</div>
+</div>
+		</div>
+	</div>
+
+</section>
+	
+		</main>
+		<footer>
+	<div class="footer-copyright">
+		<p class="footer-copyright__text">
+		Copyright @ ministrywithyou.com 2021
+		</p>
+	</div>
+</footer>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+crossorigin="anonymous"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// GSAP TIMELINE
+
+gsap.utils.toArray(".glide").forEach(box => {
+		var tl = gsap.timeline({
+scrollTrigger: {
+trigger: box,
+toggleActions: "restart none none none",
+start: "top 95%",
+}
+});
+
+		tl.from(box, {
+duration: 1.0,
+opacity: 0.5,
+y: 50,
+backgroundPosition: '0px, 0px',
+});
+		});
+
+</script>
+
+
+
+	</body>
+</html>
+

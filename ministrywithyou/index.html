@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content=""> 
+		<meta name="keywords" content=""> 
+
+		<link rel="stylesheet" href="/assets/css/main.css"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+			<!-- Custom fonts for this template -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Comfortaa&display=swap" rel="stylesheet">
+		<title>
+			Ministry with You | Home
+		</title>
+	</head>
+	<body>
+		<nav class="navbar" id="navbar">
+	<input type="checkbox" class="navbar__toggle" id="navbar__toggle" aria-label="open the navigation list"></input>
+	<ul class="navbar__list">
+		<li><a href="/" class='current'>Home</a></li>
+		<li><a href="/about/">About</a></li>
+		<li><a href="/newsletters/">Newsletters</a></li>
+		<li><a href="https://www.myegiving.com/App/Giving/stoneworks">Give</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	</ul>
+	<label for="navbar__toggle" class="navbar-toggle-label">
+		<span></span>
+	</label>
+</nav>
+
+
+			<script>
+		// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+		window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+	if(window.screen.width < 500 || document.documentElement.	clientWidth < 500) {
+		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+			document.getElementById("fixed-title").style.height = "70px";
+			document.getElementById("fixed-title").style.background = "hsla(210,94,10,.9)";
+		} else {
+			document.getElementById("fixed-title").style.background = "linear-gradient(hsla(210,94,10,.9),hsla(210,94,10,.3) )";
+			document.getElementById("fixed-title").style.height = "100%";
+
+		}
+	} else{
+			document.getElementById("fixed-title").style.height = "70px";
+	}
+} 
+	</script>
+
+<!------------------------ Banner ------------------------->
+	<header>
+		<div class="container--hero">
+
+			<div class="banner__text">
+				<div class="banner__text__half">
+
+					<span style="font-family:Comfortaa, cursive;">Ministry with You</span>
+			</div>
+				<div class="banner__text__half">
+					<span style="font-family:Comfortaa, cursive;">Starnes in Romania</span>
+			</div>
+			<span></span>
+			</div>
+		</div>
+	</header>
+
+
+
+		<main class="container--main--bg">
+		<!------------------------ Newsletter preview ------------------------->
+<section id="featured-posts">
+	<div class="container-fp">
+		<div class="fp__blog-link">
+			<a href="#featured-posts">Recent Posts:</a>
+		</div>
+		<div class="wrapper-fp">
+			
+			<div class="card-fp">
+				<a href=" /2021/09/29/flying-to-romania-today.html ">
+					<div class="card-fp__img">
+						<img style="display:block;width:100%;" src=" /assets/images/family-2.jpg" />
+					</div>
+					<div class="card-fp__title">
+						Flying to Romania today!
+					</div>
+					<div class="card-fp__text">
+						Our flight to Romania is later this evening, and we're......
+					</div>
+					<div class="post-date"></div>
+					<div class="card-fp__date">
+						29 September 2021
+					</div>
+				</a>
+			</div>
+			
+			<div class="card-fp">
+				<a href=" /2021/09/02/september-update.html ">
+					<div class="card-fp__img">
+						<img style="display:block;width:100%;" src=" /assets/images/baptism.png" />
+					</div>
+					<div class="card-fp__title">
+						September Update
+					</div>
+					<div class="card-fp__text">
+						The church in Gyergyo is growing! Four men were baptized......
+					</div>
+					<div class="post-date"></div>
+					<div class="card-fp__date">
+						02 September 2021
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+	</div>
+</section>
+
+<section>
+	<div class="container coming-container">
+	<div class="coming-soon-text">More Coming Soon!</div>
+	</div>
+</section>
+
+	
+		</main>
+		<footer>
+	<div class="footer-copyright">
+		<p class="footer-copyright__text">
+		Copyright @ ministrywithyou.com 2021
+		</p>
+	</div>
+</footer>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+crossorigin="anonymous"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// GSAP TIMELINE
+
+gsap.utils.toArray(".glide").forEach(box => {
+		var tl = gsap.timeline({
+scrollTrigger: {
+trigger: box,
+toggleActions: "restart none none none",
+start: "top 95%",
+}
+});
+
+		tl.from(box, {
+duration: 1.0,
+opacity: 0.5,
+y: 50,
+backgroundPosition: '0px, 0px',
+});
+		});
+
+</script>
+
+
+
+	</body>
+</html>
+
